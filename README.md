@@ -1,26 +1,62 @@
-🍕 PIZZA SALES ANALYSIS USING POWER BI AND SQL
-🎯 Data Analytics Project by Md Sahanwaj Khan
+# 🍕 **Pizza Sales Analysis using SQL & Power BI**
 
-This project uses SQL Server for data analysis and Power BI for interactive dashboard visualization.
-It provides business insights from pizza sales data — covering revenue, trends, and top-performing pizzas.
+This project provides analytical insights into **pizza sales performance** using **Microsoft SQL Server** and **Power BI**.  
+It highlights key sales trends, performance metrics, and top-selling pizzas through interactive visual dashboards.
 
-🧩 PROJECT OBJECTIVES
+---
 
-Analyze total revenue, total orders, and average order value
+## 🖼️ **Dashboard Preview**
 
-Identify top and bottom performing pizzas by revenue and quantity
+### 🔹 Overall Sales Dashboard
+<img src="Dashboard_1_Overall_Sales.png" alt="Overall Sales Dashboard" width="900">
 
-Study daily and monthly order trends
+### 🔹 Best & Worst Sellers Dashboard
+<img src="Dashboard_2_Best_Worst_Sellers.png" alt="Best and Worst Sellers Dashboard" width="900">
 
-Evaluate sales distribution across pizza categories and sizes
+> 📊 *These dashboards visualize key KPIs such as total revenue, orders, pizza category sales, and top-performing pizzas.*
 
-🧰 TOOLS & TECHNOLOGIES USED
-Tool	Purpose
-Microsoft SQL Server	KPI calculation and data analysis
-Microsoft Power BI	Dashboard creation and visualization
-Microsoft Excel	Data source and cleaning
-Power Query & DAX	Data transformation and modeling
-🧮 SQL QUERIES USED
+---
+
+## 🎯 **Project Objectives**
+- Analyze total revenue, total orders, and average order value  
+- Identify top and bottom-performing pizzas by revenue and quantity  
+- Study daily and monthly sales trends  
+- Evaluate sales distribution across pizza categories and sizes  
+- Support business decisions for improving pizza sales  
+
+---
+
+## 🧰 **Tools & Technologies Used**
+| Tool / Technology | Purpose |
+|--------------------|----------|
+| **SQL Server** | Data querying and KPI calculation |
+| **Power BI Desktop** | Dashboard creation and visualization |
+| **Microsoft Excel** | Data cleaning and preprocessing |
+| **Power Query & DAX** | Data modeling and transformation |
+
+---
+
+## 📊 **Dashboard Features**
+1. **KPI Cards** – Total Revenue, Total Orders, Avg. Order Value, Pizzas Sold  
+2. **Sales Trend Analysis** – Daily and Monthly order trends  
+3. **Sales by Category and Size** – Breakdown by pizza type and size  
+4. **Top & Bottom 5 Pizzas** – Based on revenue, quantity, and orders  
+5. **Dynamic Filters** – Analyze results for specific months or categories  
+
+---
+
+## 📈 **Key Insights**
+- 🍕 **Classic pizzas** generated the highest revenue overall  
+- 📅 **Friday and Saturday** had the most orders per week  
+- 🧾 **Medium size** pizzas were the most popular choice  
+- 💰 **Thai Chicken Pizza** was the top-selling pizza by revenue  
+- 📊 **February** showed strong performance for "Veggie" and "Supreme" categories  
+
+---
+
+## 🧮 **SQL Queries Used**
+
+```sql
 -- Total Revenue
 SELECT SUM(total_price) AS Total_Revenue FROM pizza_sales;
 
@@ -37,8 +73,7 @@ SELECT COUNT(DISTINCT order_id) AS Total_Orders FROM pizza_sales;
 SELECT CAST(SUM(quantity) AS DECIMAL(10,2)) / 
        CAST(COUNT(DISTINCT order_id) AS DECIMAL(10,2)) AS Avg_Pizzas_Per_Order
 FROM pizza_sales;
-
-📈 TREND ANALYSIS
+📅 Trend Analysis Queries
 
 Daily Trend for Orders:
 
@@ -55,86 +90,15 @@ SELECT DATENAME(MONTH, order_date) AS Month_Name,
 FROM pizza_sales
 GROUP BY DATENAME(MONTH, order_date);
 
-💹 KEY METRICS (KPIs)
-KPI	Description	Value (Example)
-Total Revenue	Total sales value	₹817.86K
-Average Order Value	Avg. sales per order	₹38.31
-Total Pizzas Sold	Number of pizzas sold	49,574
-Total Orders	Unique orders	21,350
-Avg Pizzas per Order	Pizzas per order	2.32
-📊 DASHBOARD PREVIEWS
-🔹 Dashboard 1 – Overall Sales Overview
-
-This dashboard shows overall KPIs, daily & monthly trends, and sales by category and size.
-
-🔹 Dashboard 2 – Best/Worst Sellers
-
-This dashboard displays the top and bottom-performing pizzas by revenue, quantity, and total orders.
-
-💡 KEY INSIGHTS
-
-Friday and Saturday have the highest number of sales 🍕
-
-Classic pizzas contribute maximum to total revenue
-
-Medium-sized pizzas are most preferred by customers
-
-July and January show peak order months
-
-Thai Chicken Pizza generates the highest revenue and orders
-
-📘 FILES INCLUDED
-Pizza_Sales_Analysis/
-├── Pizza_Sales_Analysis.pbix          → Power BI Dashboard
-├── Pizza_Sales_Data.xlsx              → Dataset
-├── Pizza_Sales_SQL_Queries.sql        → SQL File
-├── Pizza_Sales_Analysis_Report.docx   → Word Report
-├── Pizza_Sales_Analysis_Dashboard.pptx → PowerPoint Presentation
-├── Dashboard_1_Overall_Sales.png      → Dashboard 1 Image
-├── Dashboard_2_Best_Worst_Sellers.png → Dashboard 2 Image
-└── README.md                          → This file
-
-📊 CONCLUSION
-
-The Pizza Sales Dashboard provides a complete analysis of sales performance.
-It helps understand:
-
-Which pizzas and sizes drive revenue
-
-When demand peaks during the week/month
-
-How customer preferences affect business outcomes
-
-Combining SQL and Power BI delivers actionable insights for better decision-making.
-
-🚀 FUTURE ENHANCEMENTS
-
-Add live SQL connection for automatic refresh
-
-Include customer segmentation & regional analysis
-
-Integrate predictive analytics for forecasting future sales
-
-👨‍💻 AUTHOR
+💡 Performance Insights
+Metric	Description	Example Output
+Total Revenue	Sum of all pizza sales	₹817,860
+Total Orders	Number of unique customer orders	21,350
+Total Pizzas Sold	Total pizzas sold	49,574
+Avg. Order Value	Average revenue per order	₹38.31
+Avg. Pizzas per Order	Avg. pizzas per customer order	2.32
+🧑‍💻 Author
 
 Md Sahanwaj Khan
-GitHub: Mskhan-6812
-
-“Turning raw data into meaningful business insights using SQL & Power BI.”
-
-⭐ SUPPORT
-
-If you found this project useful, please consider giving it a 🌟 star on GitHub.
-It motivates me to continue learning and building data projects!
-
-🧾 HOW TO USE
-
-Clone or download this repository.
-
-Open Pizza_Sales_Analysis.pbix in Power BI Desktop.
-
-Explore the interactive visuals and slicers.
-
-Open Pizza_Sales_SQL_Queries.sql to see how data was analyzed.
-
-Check README.md for full documentation and dashboard preview.
+🎓 Master of Computer Applications (MCA)
+🏫 Galgotias College of Engineering and Technology
